@@ -1,4 +1,4 @@
-#系统结构主要使用spring,springmvc,mybatis等搭建，maven结构
+#实例的系统结构使用spring,springmvc,mybatis等搭建，maven结构，参考了领域驱动设计，对于小项目还是很方便
 #项目模块分层图
 ![image](https://github.com/fuhaodashu/pai/blob/master/pai-tools/image/module.png)
 #系统结构设计图
