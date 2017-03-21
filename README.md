@@ -49,7 +49,7 @@
 
 ![image](https://github.com/fuhaodashu/pai/tree/master/pai-tools/image/codegen/7.png)
 
-![image](https://github.com/fuhaodashu/pai/tree/master/pai-tools/image/codegen/1.png)
+![image](https://github.com/fuhaodashu/pai/blob/master/pai-tools/image/codegen/1.png)
 
 ![image](https://github.com/fuhaodashu/pai/tree/master/pai-tools/image/codegen/2.png)
 
