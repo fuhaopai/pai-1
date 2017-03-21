@@ -39,28 +39,28 @@
 #效果展示
 -在codegen.xml中填入要生成的表信息，代码所属模块，db,dao,domain,controller,view,api 6个层次指定哪几个会生成相应的代码
 
-![image](https://github.com/fuhaodashu/pai/tree/master/pai-tools/image/codegen/3.png)
+![image](https://github.com/fuhaodashu/pai/blob/master/pai-tools/image/codegen/3.png)
 
 -源码中代码生成器的执行入口
 
-![image](https://github.com/fuhaodashu/pai/tree/master/pai-tools/image/codegen/8.png)
+![image](https://github.com/fuhaodashu/pai/blob/master/pai-tools/image/codegen/8.png)
 
 -生成结果
 
-![image](https://github.com/fuhaodashu/pai/tree/master/pai-tools/image/codegen/7.png)
+![image](https://github.com/fuhaodashu/pai/blob/master/pai-tools/image/codegen/7.png)
 
 ![image](https://github.com/fuhaodashu/pai/blob/master/pai-tools/image/codegen/1.png)
 
-![image](https://github.com/fuhaodashu/pai/tree/master/pai-tools/image/codegen/2.png)
+![image](https://github.com/fuhaodashu/pai/blob/master/pai-tools/image/codegen/2.png)
 
 -界面展示效果，先登录
 
-![image](https://github.com/fuhaodashu/pai/tree/master/pai-tools/image/codegen/4.png)
+![image](https://github.com/fuhaodashu/pai/blob/master/pai-tools/image/codegen/4.png)
 
 -给刚生成的功能配置路劲
 
-![image](https://github.com/fuhaodashu/pai/tree/master/pai-tools/image/codegen/5.png)
+![image](https://github.com/fuhaodashu/pai/blob/master/pai-tools/image/codegen/5.png)
 
 -查看效果
 
-![image](https://github.com/fuhaodashu/pai/tree/master/pai-tools/image/codegen/6.png)
+![image](https://github.com/fuhaodashu/pai/blob/master/pai-tools/image/codegen/6.png)
