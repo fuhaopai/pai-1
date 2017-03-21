@@ -36,7 +36,7 @@
 
 -原理同上，只是做的操作是文件删除。
 
-#效果展示，一下是我自己做的一个小例子，代码架构设计见[系统搭建](https://github.com/fuhaodashu/pai/blob/master/SYSTEM.md)
+#效果展示，以下是我自己实验用的一个小例子，代码架构设计请点击 [系统搭建](https://github.com/fuhaodashu/pai/blob/master/SYSTEM.md)
 -在codegen.xml中填入要生成的表信息，代码所属模块，db,dao,domain,controller,view,api 6个层次指定哪几个会生成相应的代码
 
 ![image](https://github.com/fuhaodashu/pai/blob/master/pai-tools/image/codegen/3.png)
