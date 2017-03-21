@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<project name="生成代码"  default="生成代码">
+	<property name="lib.dir" value="./lib"/>
+
+	<path id="lib">
+		<fileset dir="${lib.dir}" includes="*.jar" /> 
+    </path>
+	
+    <taskdef name="generateCode" classname="com.pai.codegen.main.CodeGenerator">
+     	<classpath refid="lib" />
+    </taskdef>
+	<taskdef name="deleteCode" classname="com.pai.codegen.main.CodeDelete">
+		<classpath refid="lib"/>
+	</taskdef>
+	<target id="generateCode"  name="生成代码" description="生成代码">
+		<generateCode rootpath=""/>
+	</target>
+	<target id="deleteCode"  name="删除代码" description="删除生成的代码">
+		<deleteCode rootpath=""/>
+	</target>
+	
+</project>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="codegen.xsd">
+	<templates>
+		<!--单元测试相关类 -->
+		<template key="baseTest"  path="baseTest.ftl"/>
+		
+		<!-- 持久层 persistence -->
+		<template key="mapping"  path="mapping.ftl"/>
+		<template key="tbl" path="tbl.ftl"/>
+		<template key="po" path="po.ftl"/>		
+		<template key="dao" path="dao.ftl"/>
+		<template key="daoImpl" path="daoImpl.ftl"/>
+		<template key="queryDao" path="queryDao.ftl"/>
+		<template key="queryDaoImpl" path="queryDaoImpl.ftl"/>		
+		<template key="daoTest"  path="daoTest.ftl"/>
+
+		<!-- 领域层 domain -->
+		<template key="domain"  path="domain.ftl"/>		
+		<template key="repository"  path="repository.ftl"/>
+		<template key="repositoryImpl"  path="repositoryImpl.ftl"/>
+		<template key="domainTest"  path="domainTest.ftl"/>
+
+		<!--单元测试相关类 -->
+		<template key="controller"  path="controller.ftl"/>
+		<template key="controllerTest"  path="controllerTest.ftl"/>
+		<template key="apiController" path="apiController.ftl"/>
+		<template key="apiControllerTest" path="apiControllerTest.ftl"/>
+		<template key="apiResult" path="apiResult.ftl"/>
+		<template key="apiListResult" path="apiListResult.ftl"/>
+		<template key="apiView" path="apiView.ftl"/>
+		<template key="apiViewConverter" path="apiViewConverter.ftl"/>
+		<template key="list"  path="list.ftl"/>
+		<template key="edit"  path="edit.ftl"/>
+		<template key="listJs"  path="listJs.ftl"/>								
+	</templates>
+
+	<dbFiles>
+		<file refTemplate="mapping" filename="{class}.map.xml" dir="src\main\resources\com\pai\{sys}\{module}\persistence\mapping"  sub="true"  override="true"/>											
+		<file refTemplate="tbl" filename="{class}Tbl.java" dir="src\main\java\com\pai\{sys}\{module}\persistence\entity"  sub="true" override="true"/>
+	</dbFiles>
+
+	<dbDirs><!-- 对应table配置的module -->
+		<dir key="gl" value="pai-biz-root\modules\biz-gl"/>
+		<dir key="ou" value="pai-biz-root\modules\biz-ou"/>
+		<dir key="product" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="home" value="pai-biz-root\modules\biz-ec"/>				
+		<dir key="sale" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="cart" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="ad" value="pai-biz-root\modules\biz-ec"/>		
+		<dir key="so" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="sp" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="me" value="pai-biz-root\modules\biz-ou"/>
+		<dir key="job" value="pai-biz-root\modules\biz-gl"/>
+		<dir key="site" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="da" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="pay" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="rule" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="bbs" value="pai-bbs-root\modules\biz-bbs"/>
+		<dir key="act" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="aftersale" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="onlinecustserv" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="stock" value="pai-biz-root\modules\biz-ec"/>
+	</dbDirs> 
+
+	<daoFiles>											
+		<file refTemplate="po" filename="{class}Po.java" dir="src\main\java\com\pai\{sys}\{module}\persistence\entity"  sub="true" override="true"/>
+		<file refTemplate="dao" filename="{class}Dao.java" dir="src\main\java\com\pai\{sys}\{module}\persistence\dao" sub="true"  override="true"/>
+		<file refTemplate="daoImpl" filename="{class}DaoImpl.java" dir="src\main\java\com\pai\{sys}\{module}\persistence\dao\impl" sub="true"  override="true"/>
+		<file refTemplate="queryDao" filename="{class}QueryDao.java" dir="src\main\java\com\pai\{sys}\{module}\persistence\dao" sub="true"  override="true"/>
+		<file refTemplate="queryDaoImpl" filename="{class}QueryDaoImpl.java" dir="src\main\java\com\pai\{sys}\{module}\persistence\dao\impl" sub="true"  override="true"/>		
+		<file refTemplate="daoTest" filename="{class}DaoTest.java" dir="src\test\java\com\pai\{sys}\{module}\test\persistence\dao" sub="false"  override="true"/>
+		<file refTemplate="baseTest" filename="{baseClass}BaseTest.java" dir="src\test\java\com\pai\{sys}\{module}\test" sub="false" />						
+	</daoFiles>
+
+	<daoDirs><!-- 对应table配置的module -->
+		<dir key="gl" value="pai-biz-root\modules\biz-gl"/>
+		<dir key="ou" value="pai-biz-root\modules\biz-ou"/>
+		<dir key="product" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="home" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="sale" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="cart" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="ad" value="pai-biz-root\modules\biz-ec"/>		
+		<dir key="so" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="sp" value="pai-biz-root\modules\biz-ec"/>	
+		<dir key="me" value="pai-biz-root\modules\biz-ou"/>	
+		<dir key="job" value="pai-biz-root\modules\biz-gl"/>
+		<dir key="site" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="da" value="pai-biz-root\modules\biz-ec"/>				
+		<dir key="pay" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="rule" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="bbs" value="pai-bbs-root\modules\biz-bbs"/>
+		<dir key="act" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="aftersale" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="onlinecustserv" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="stock" value="pai-biz-root\modules\biz-ec"/>
+	</daoDirs> 
+
+	<domainFiles>											
+		<file refTemplate="domain" filename="{class}.java" dir="src\main\java\com\pai\{sys}\{module}\domain"  sub="true" override="true"/>			
+		<file refTemplate="domainTest" filename="{class}Test.java" dir="src\test\java\com\pai\{sys}\{module}\test\domain"  sub="true" override="true"/>
+		<file refTemplate="repository" filename="{class}Repository.java" dir="src\main\java\com\pai\{sys}\{module}\repository" sub="false"  override="true"/>
+		<file refTemplate="repositoryImpl" filename="{class}RepositoryImpl.java" dir="src\main\java\com\pai\{sys}\{module}\repository\impl" sub="false"  override="true"/>					
+	</domainFiles>
+  
+	<domainDirs><!-- 对应table配置的module -->
+		<dir key="gl" value="pai-biz-root\modules\biz-gl"/>
+		<dir key="ou" value="pai-biz-root\modules\biz-ou"/>
+		<dir key="product" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="home" value="pai-biz-root\modules\biz-ec"/>	
+		<dir key="sale" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="cart" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="ad" value="pai-biz-root\modules\biz-ec"/>		
+		<dir key="so" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="sp" value="pai-biz-root\modules\biz-ec"/>	
+		<dir key="me" value="pai-biz-root\modules\biz-ou"/>	
+		<dir key="job" value="pai-biz-root\modules\biz-gl"/>
+		<dir key="site" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="da" value="pai-biz-root\modules\biz-ec"/>			
+		<dir key="pay" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="rule" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="bbs" value="pai-bbs-root\modules\biz-bbs"/>
+		<dir key="act" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="aftersale" value="pai-biz-root\modules\biz-ec"/>
+		<dir key="onlinecustserv" value="pai-biz-root\modules\biz-ec"/>
+	</domainDirs>  
+  
+	<controllerFiles>																					
+		<file refTemplate="controller" filename="{class}Controller.java" dir="src\main\java\com\pai\storeadmin\{sys}\{module}\web\controller" sub="false" override="true"/>
+		<file refTemplate="controllerTest" filename="{class}ControllerTest.java" dir="src\test\java\com\pai\storeadmin\{sys}\{module}\test\web\controller" sub="false" override="true"/>
+	</controllerFiles>	
+	
+	<controllerDirs>
+		<dir key="gl" value="pai-app-root\modules\app-admin"/>
+		<dir key="ou" value="pai-app-root\modules\app-admin"/>
+		<dir key="product" value="pai-app-root\modules\app-admin"/>
+		<dir key="home" value="pai-app-root\modules\app-admin"/>	
+		<dir key="sale" value="pai-app-root\modules\app-admin"/>
+		<dir key="cart" value="pai-app-root\modules\app-admin"/>
+		<dir key="ad" value="pai-app-root\modules\app-admin"/>		
+		<dir key="so" value="pai-app-root\modules\app-admin"/>
+		<dir key="sp" value="pai-app-root\modules\app-admin"/>
+		<dir key="me" value="pai-app-root\modules\app-admin"/>			
+		<dir key="job" value="pai-app-root\modules\app-admin"/>
+		<dir key="site" value="pai-app-root\modules\app-admin"/>
+		<dir key="da" value="pai-app-root\modules\app-admin"/>
+		<dir key="pay" value="pai-app-root\modules\app-admin"/>
+		<dir key="rule" value="pai-app-root\modules\app-admin"/>
+		<dir key="bbs" value="pai-app-root\modules\app-admin"/>
+		<dir key="act" value="pai-app-root\modules\app-admin"/>
+		<dir key="aftersale" value="pai-app-root\modules\app-admin"/>
+		<dir key="onlinecustserv" value="pai-app-root\modules\app-admin"/>
+		<dir key="stock" value="pai-app-root\modules\app-admin"/>
+	</controllerDirs>
+	
+	<viewFiles>																					
+		<file refTemplate="list" filename="{classVar}List.ftl" dir="src\main\webapp\WEB-INF\view\storeadmin\{sys}\{module}\{classVar}" sub="false" override="true"/>
+		<file refTemplate="edit" filename="{classVar}Edit.ftl" dir="src\main\webapp\WEB-INF\view\storeadmin\{sys}\{module}\{classVar}" sub="false" override="true"/>					
+		<file refTemplate="listJs" filename="{classVar}.js" dir="src\main\webapp\scripts\pai\{sys}\{module}" sub="false" override="true"/>
+	</viewFiles>	
+	
+	<viewDirs>
+		<dir key="gl" value="pai-app-root\modules\app-admin"/>
+		<dir key="ou" value="pai-app-root\modules\app-admin"/>
+		<dir key="product" value="pai-app-root\modules\app-admin"/>
+		<dir key="home" value="pai-app-root\modules\app-admin"/>	
+		<dir key="sale" value="pai-app-root\modules\app-admin"/>
+		<dir key="cart" value="pai-app-root\modules\app-admin"/>	
+		<dir key="ad" value="pai-app-root\modules\app-admin"/>		
+		<dir key="so" value="pai-app-root\modules\app-admin"/>
+		<dir key="sp" value="pai-app-root\modules\app-admin"/>
+		<dir key="me" value="pai-app-root\modules\app-admin"/>
+		<dir key="job" value="pai-app-root\modules\app-admin"/>
+		<dir key="site" value="pai-app-root\modules\app-admin"/>
+		<dir key="da" value="pai-app-root\modules\app-admin"/>
+		<dir key="pay" value="pai-app-root\modules\app-admin"/>
+		<dir key="rule" value="pai-app-root\modules\app-admin"/>
+		<dir key="bbs" value="pai-app-root\modules\app-admin"/>
+		<dir key="act" value="pai-app-root\modules\app-admin"/>
+		<dir key="aftersale" value="pai-app-root\modules\app-admin"/>
+		<dir key="onlinecustserv" value="pai-app-root\modules\app-admin"/>
+		<dir key="stock" value="pai-app-root\modules\app-admin"/>
+	</viewDirs>
+	
+	<apiBaseFiles>																							
+		<file refTemplate="apiResult" filename="{class}APIResult.java" dir="src\main\java\com\pai\app\common\{sys}\{module}\view" sub="false" override="true"/>
+		<file refTemplate="apiListResult" filename="{class}ListAPIResult.java" dir="src\main\java\com\pai\app\common\{sys}\{module}\view" sub="false" override="true"/>
+		<file refTemplate="apiView" filename="{class}View.java" dir="src\main\java\com\pai\app\common\{sys}\{module}\view" sub="false" override="true"/>
+	</apiBaseFiles>		
+	
+	<apiBaseDirs>
+		<dir key="all" value="pai-app-root\modules\app-web"/>
+	</apiBaseDirs>	
+	
+	<apiFiles>																					
+		<file refTemplate="apiController" filename="{class}APIController.java" dir="src\main\java\com\pai\apiservice\{sys}\{module}\web\controller" sub="false" override="true"/>
+		<file refTemplate="apiControllerTest" filename="{class}APIControllerTest.java" dir="src\test\java\com\pai\apiservice\{sys}\{module}\test\web\controller" sub="false" override="true"/>
+		<file refTemplate="apiViewConverter" filename="{class}ViewConverter.java" dir="src\main\java\com\pai\apiservice\{sys}\{module}\helper" sub="false" override="true"/>
+	</apiFiles>			
+
+	<apiDirs>
+		<dir key="gl" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="ou" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="product" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="home" value="pai-app-root\modules\app-apiservice"/>	
+		<dir key="sale" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="ad" value="pai-app-root\modules\app-apiservice"/>				
+		<dir key="cart" value="pai-app-root\modules\app-apiservice"/>		
+		<dir key="so" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="sp" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="me" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="job" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="site" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="da" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="pay" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="rule" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="bbs" value="pai-bbs-root\modules\bbs-apiservice"/>
+		<dir key="act" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="aftersale" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="onlinecustserv" value="pai-app-root\modules\app-apiservice"/>
+		<dir key="stock" value="pai-app-root\modules\app-apiservice"/>
+	</apiDirs>
+
+	<variables>
+		<variable name="developer" value="fuhao" />
+		<variable name="company" value="π" />
+		<!--keys值必须小写，且用,隔开-->
+		<variable name="keys" value="db,dao,domain,controller,view,apiBase,api"/>
+		<variable name="workspace" value="D:\workspace" />
+	</variables>
+        <!--可以有多个<table>标签-->
+	<table tableName="pai_auth_resources" >
+		<variable name="sys" value="pai" />
+		<variable name="module" value="auth" />
+		<variable name="class" value="AuthResources" />		
+		<variable name="baseClass" value="AuthResources" />
+		 <!-- doType设置为all或空均可，all为默认生成所有文件, 为空时生成除api外的所有文件，doType的值大小写均可，代码会转换成小写	并与keys每个值匹配-->
+		<variable name="doType" value="db,dao,domain,controller,view,api" />
+		<!-- 
+		<subtable tablename=""  foreignKey="">
+			<variable name="sys" value="pai" />
+			<variable name="module" value="stock" />
+			<variable name="class" value="Stock2" />		
+			<variable name="baseClass" value="Stock2" /> 			
+			<variable name="doType" value="db,dao,domain,controller,view,api" />
+		</subtable>
+		 -->
+	</table>	
+	
+	 <!-- 默认是all ，或者其它指定项，逗号分隔。db,dao,domain,controller,view,api-->
+</config>
