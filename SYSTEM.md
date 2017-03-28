@@ -1,4 +1,4 @@
-#实例的系统结构使用spring,springmvc,mybatis等搭建，maven结构，参考了领域驱动设计，对于小项目还是很方便
+#实例的系统结构使用spring,springmvc,mybatis等搭建，restful风格。当业务量大，可对biz-xx进行服务化改造扩展（接口+服务），相当方便。maven结构，参考了领域驱动设计，对于小项目还是很方便
 
 #项目模块分层图
 
